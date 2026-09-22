@@ -5,4 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   has_many :job_applications, dependent: :destroy
+  
+  # expects a password_digest column in the users table
+  # has_secure_password
 end
